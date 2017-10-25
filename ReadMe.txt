@@ -12,6 +12,8 @@
 Get-Ratios calculates both your M Ratio and Effective M. Depending on the value it will also place you on a colour zone. This is based on:
 https://en.wikipedia.org/wiki/M-ratio
 
+PowerShell Gallery: https://www.powershellgallery.com/packages/PokerMath/1.3
+
 Get-Mratio will calculate your M Ratio
    
 Get-EffectiveM will calculate you Effective M Ratio 

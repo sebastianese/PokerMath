@@ -52,7 +52,7 @@ $EffectiveM = $Mratio * ($players/10)
 $BlindOut2 = $players * $EffectiveM
 $TotalBlinds = $Stack / $BB
 
-Write-Host "Calculating Stats for a total stack size of [$stack], on a [$players] player table. Blinds are [$SB] and [$BB] with an ante of [$Ante] " -ForegroundColor Cyan
+
 
 
 
