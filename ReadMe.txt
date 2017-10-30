@@ -3,8 +3,8 @@
 # Filename  :   PokerMath.psm1          
 # Created by:   Seab4ss            
 # Date      :   10/20/2017                
-# Version   :   1.0        
-# Update    :   This is the first version
+# Version   :   1.4        
+# Update    :   Removed the Get-CallStats function for improvement. 
 # E-mail    :   sebastianese@gmail.com
 #####################
 
