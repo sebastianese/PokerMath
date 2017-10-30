@@ -3,8 +3,8 @@
 # Filename  :   PokerMath.psm1          
 # Created by:   Seab4ss            
 # Date      :   10/20/2017                
-# Version   :   1.0        
-# Update    :   This is the first version
+# Version   :   1.4        
+# Update    :   Removed call stats funciton
 # E-mail    :   sebastianese@gmail.com
 #####################
 
@@ -98,35 +98,3 @@ Get-EffectiveM
 
 }
 
-function Get-CallStats {
-#Based on Phil Gordon rule of 2 and 4 . Still in development
-Param(
-   [Parameter(Mandatory=$true, ValueFromPipeline=$true)]
-   [int]$Outs,
-   [Parameter(Mandatory=$true, ValueFromPipeline=$true)]
-   [int]$Pot,
-   [Parameter(Mandatory=$true, ValueFromPipeline=$true)]
-   [int]$Callbet,
-   [Parameter(Mandatory=$true, ValueFromPipeline=$true)]
-   [int]$CardsToSee
-   )
-
-$GordonC = 2
-$EffectivePot = $Pot + $CallBet  
-$WinP = ($Outs * $GordonC) * $CardsToSee
-$contribution = ($Callbet*100)/$EffectivePot
-$EV = $WinP - $contribution
-$EvVal = ($EffectivePot*$EV) /100
-
-Write-Host "Your winning percentage for [$Outs] outs is [$WinP]%.
-Your EV is [$EV] and you are contributing with [$contribution]% of the pot with is about [$EvVal] chips" -ForegroundColor Cyan
-if ($EV -ge "0"){
-Write-Host "You are in a good position to call this hand" -ForegroundColor Green
-}
-else{
-Write-Host "THis hand should be folded" -ForegroundColor Red
-}
-
-}
-
-#EV = {W% * $W} - {%l *$l} needs to be 0 or more
